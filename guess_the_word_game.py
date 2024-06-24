@@ -1,5 +1,5 @@
 import random
-words=['top','pot','kunna','annuk','anuj','anju','krushna','rushank','shalvi','vishal']
+words=['top','pot','anuj','anju','krushna','rushank','shalvi','vishal']
 score=0
 while True :
     for wr in range(3):

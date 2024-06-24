@@ -10,3 +10,10 @@ print(a)
 #empty set
 a=set()
 print(a)
+
+
+
+list=['krushna','jadhav',45]
+
+b= set(list)
+print(b)
