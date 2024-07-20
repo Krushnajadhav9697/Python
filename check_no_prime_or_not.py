@@ -11,7 +11,7 @@
 
 
 
-n=15
+n=57
 for i in range (2,n,1):
     if n%i==0:
         print("not prime")
@@ -27,10 +27,10 @@ for i in range (1,51,1):
         else:
             pass
 '''
-##for i in range (1,101,1):
-##    for j in range (2,i,1):
-##        if i%j==0:
-##            break
-##    else:
-##        print(i)
+for i in range (1,101,1):
+    for j in range (2,i,1):
+        if i%j==0:
+            break
+    else:
+        print(i)
             

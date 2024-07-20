@@ -8,7 +8,7 @@
 
 #1.filter Function:
 #   filter function filter out element of iterable
-#   filter function return filtera object
+#   filter function return filter object
 
 #syntax:
 
@@ -26,7 +26,7 @@
 ##print(filter_obj)
 ##print(list(filter_obj))
 
-n=[5,13,9,15,19,23,40,47,45,97]
+n=[5,2,13,9,15,19,23,40,47,45,97]
 def prime(a):
     for i in range (2,a,1):
         if a%i==0:
@@ -51,16 +51,16 @@ print(filter_obj)
 ##x=list(map(square,n))
 ##print(x)
 
-n=[1,2,3,4,5,6]
-
-def factorial(a):
-    
-    for i in range (1,a):
-         a=a*i
-    return a
-
-x=list(map(factorial,n))
-print(x)
+##n=[1,2,3,4,5,6]
+##
+##def factorial(a):
+##    
+##    for i in range (1,a):
+##         a=a*i
+##    return a
+##
+##x=list(map(factorial,n))
+##print(x)
 
  
 

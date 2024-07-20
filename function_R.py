@@ -31,8 +31,9 @@ print(sum)
 #4.Function with argumrnt and return value
 
 def add(a,b):
-    return f"addition of {a} and {b} is ",a+b
+    return f'addition of {a} and {b} is',a+b
 x=12
 y=10
 print(add(x,y))
+
 

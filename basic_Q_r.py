@@ -1,4 +1,4 @@
-##1)take input from user and print its inputvalue using input function
+##1)take input from user and print its input value using input function
 
 ##user=input("enter name ")
 ##print(user)
@@ -40,7 +40,7 @@
 ##8)create a tuple like(1,2,3,4,3,2) and print the index number of 3
 
 ##a=(1,2,3,4,3,2)
-##print(a[3])
+##print(a.index(3))
 
 ##9)create a tuple like(1,2,3,4,3,2) and print (2,3,4) only
 
@@ -48,16 +48,23 @@
 ##print(a[1:4])
 
 ##10)create tuple like(1,2,3,4,3,2) and remove 3 in this tuple
-##
+
 ##a=(1,2,3,4,3,2)
 ##b=list(a)
 ####print(b)
 ##b.remove(3)
 ##a=tuple(b)
 ##print(a)
-
-#by list comprehension
-
+##
+#### OR
+##
+##for i in range(b.count(3)):
+##    b.remove(3)
+##print(tuple(b))
+##    
+##
+###by list comprehension
+##
 ##c=tuple(i for i in a if i!=3)
 ##print(c)
 
@@ -77,6 +84,7 @@
 
 ##a=('apple',)
 ##print(type(a))
+##print(len(a))
 
 ##14)create empty set
 
@@ -120,6 +128,11 @@
 ##
 ##d=a|b
 ##print(d)
+##
+#### OR
+##
+##x=list(a) + list(b)
+##print(set(x))
 
 ##19) create two sets like {1,2,3,4} and {3,4,5,6} and find the intersection without using intersection method
 
@@ -138,6 +151,13 @@
 ##
 ##d=a&b
 ##print(d)
+##
+#### OR
+##
+##for i in a :
+##    if i in b:
+##        c.add(i)
+##print(c)
 
 ##20)create two sets like {1,2,3,4} and {3,4,5,6} and find there difference without using difference method
 
@@ -148,11 +168,13 @@
 ##    if i not in b:
 ##        c.add(i)
 ##print(c)
-
-##   or we can used - operator
-
+##
+####   or we can used - operator
+##
 ##d=a-b
 ##print(d)
+
+
 
 ##21)create a set like {1,2,3,4} and remove 3
 
@@ -162,6 +184,7 @@
 ##print(a)
 ##
 ####  or
+##
 ##b=set()
 ##for i in a:
 ##    if i!=3:
@@ -171,7 +194,7 @@
 ##22)create a set like {1,2,3,4} and remove 3 using discard method and undrstand what's the difference between remove and pop
 
 ##a={1,2,3,4}
-##a.discard(3)
+##a.pop(0)
 ##print(a)
 
 ##23)create a string like "hello world" and count "o"
@@ -183,24 +206,44 @@
 ##24)create a string like "hello world" and find "z" or index "z" and understand difference between index and count
 
 ##a="hello world"
-##print(a.index('d'))
+####print(a.index('z'))
+##index_z=a.find('z')
+##print(index_z)  #The index() function in Python searches lists. We pass it a value, and it returns the
+                #index where that value is found. If no value is found, it returns -1. With count, we
+                #count the matching elements in a list.
+
+
+
 
 ##25)create a list like ["p","y","t","h","o","n"] and print "python"
 
 ##a=["p","y","t","h","o","n"]
 ##print("".join(a))
+##
+####OR
+##
+##s=""
+##for i in a:
+##    s+=str(i)
+##print(s)
 
 ##26)create a string "python" and print ["p","y","t","h","o","n"]
 
 ##a="python"
 ##b=list(a)
 ##print(b)
-
-##      or
+##
+####    or
 ##x=[]
+##
 ##for i in a:
 ##    x.append(i)
 ##print(x)
+##
+#### OR
+##
+##c=[i for i in a]
+##print(c)
 
 ##27)create a string like"     python" and print "python"
 
@@ -212,17 +255,29 @@
 ##a=[1,2,3,4]
 ##a.append(5)
 ##print(a)
+##
+####or
+##b=a+[5]
+##print(b)
 
 ##29)create a list [1,2,3,4] and print [1,2,3,4,1,2,3,4] using extend function
 
 ##a=[1,2,3,4]
 ##print(a*2)
+##a.extend(a)
+##print(a)
+
 
 ##30)create a list [1,2,3,4] and print [1,2,3,4,"p","y","t","h","o","n"] using extend function
 
 ##a=[1,2,3,4]
 ##b=['p','t','h','o','n']
 ##a.extend(b)
+##print(a)
+##
+####or
+##
+##a.extend(['p','t','h','o','n'])
 ##print(a)
 
 ##31)create a list [1,2,3,4] and remove 2 using pop function
@@ -258,6 +313,16 @@
 ##a=[1,2,3,4]
 ##a.sort(reverse=True)
 ##print(a)
+##
+####or
+##print(a[::-1])
+##
+####or
+##a.reverse()
+##print(a)
+
+
+
 
 ##35)create a list [1,4,3,2] and print [1,2,3,4] using function
 
@@ -285,10 +350,9 @@
 ##39)create a dict{"a":10,"b":20,"c":30} and print {"b":20,"c":30}
 
 ##a={"a":10,"b":20,"c":30}
-##
 ##a.pop('a')
 ##print(a)
-
+ 
 ##40)create a set {1,2,3,4} and remove 2
 
 ##a={1,2,3,4}
@@ -301,17 +365,25 @@
 ##1)create a string "hello" and print >> ll:2 times without using count method
 
 ##a='hello'
+##print(((a[2:4])+' ')*2)
+####or
+##for i in a:
+##    if i=='l':
+##        print(i*2,end="")
+##        print(" ",end="")
+
 
 ##2)create a string "hello" and sort it
 
 ##a='hello'
 ##b=list(a)
 ##b.sort()
+##print(b)
 ##print("".join(b))
 
 ##3)Take input string from user and find vowels
 
-##a=input("Enter your string")
+##a=input("Enter your string : ")
 ##b=list(a)
 ##c=[]
 ##print(b)
@@ -331,13 +403,23 @@
 
 ##a=65
 ##for i in range(65,a+26):
-##    print(chr(i))
+##    print(chr(i),end="")
+##print()
+##
+####or
+##
+##for i in range (ord('A'),ord('Z')+1):
+##                print(chr(i),end="")
 
 ##6)print ten time "hii"
 
 ##a='hii'
 ##for i in range(1,11):
 ##    print(a,i)
+##
+####or
+##
+##print((a+' ')*10)
 
 ##7)print right angle triangle using while loop
 
@@ -369,7 +451,7 @@
 
 ##n=int(input("Enter the number "))
 ##if n%5==0:
-##    print("the number is divisible by ")
+##    print("the number is divisible by 5")
 ##else:
 ##    print("The numbre is not divisible by 5")
 
@@ -432,32 +514,56 @@
 ##def integer_value(a):
 ##    n=0
 ##    for char in a:
-##        n=n*10+(ord(char)-ord('0'))
+##        n=n*10+(ord(char)-ord('0'))  #n=2  54-48
 ##    return n
 ##
 ##user=input("Enter the number ")
+##print(ord('0'))
 ##result=integer_value(user)
 ##print(f"The integer value is : {result}")
+##print(type(result))
+
+####or
+
+##user=eval(input("Enter the number "))
+##print("Type of user is :",type(user))
+
+
 
 ##20)create a string like " 7 apple 8 mango 9 banana" and print the int values only which dynamic state
 
 ##a="7 apple 8 mango 9 banana"
+##b=[c for c in a.split() if c.isdigit()]
+##print(b)
+##
+####or
+##
+##for i in a:
+##    if i.isdigit():
+##        print(i,end="")
+
+
 
 ##21)take input from user like 1234 and print the every second element 0 eg,1020
-
-##user=(input("Enter the value"))  
-##for i in user:
+                                 # 2 4 6 8
+##user=(input("Enter the value"))  #123456789
+##for i,k in enumerate(user):                   #012345678
 ##    if user.index(i)%2!=0:
 ##        print(i,end="")
+##        print(0,end="")
 
 ##22)take gmail from user like "abc@gmail.com" and print its name only "abc"
 
 ##user=input('Enter your gmail id ')
 ##
 ##a=user.index('@')
-##
 ##name=user[:a]
 ##print(name)
+##
+####or
+##
+##a=user.split('@')
+##print(a[0])
 
 ##23) Write a program to calculate the electricity bill (accept number of unit from user) according to the following criteria :
 ##    Unit                          Price  
@@ -620,7 +726,7 @@
 ##    sqrt.append(a)
 ##print(sqrt)
 
-##37)wpa to peint all the elements in list which are divisible by 3
+##37)wpa to print all the elements in list which are divisible by 3
 
 ##a=[18,50,12,30,75,77]
 ##b=[]
@@ -701,6 +807,27 @@
 ##            a[i],a[j]=a[j],a[i]
 ##print(a)
 ##print("Lowest number in list is :",a[-1])
+
+##6)take a dictionary and print the highest key value pair
+                                 
+##m = {'s1': 54, 's2': 78, 's3': 167, 's4': 97}
+##k=list(m.keys())
+##v=list(m.values())
+##print(k)
+##print('key :',k[v.index(max(v))],'value',max(v))
+
+##7)take a dictionary and print the lowest key value pair
+
+##m = {'s1': 54, 's2': 78, 's3': 167, 's4': 97}
+##k=list(m.keys())
+##v=list(m.values())
+##print(k)
+##print('key :',k[v.index(min(v))],'value',min(v))
+
+##8)create a list like [1,2,3,4] and print the elements without using loop
+
+a=[1,2,3,4]
+print(*a)
 
 
 
